@@ -1,0 +1,14 @@
+{
+  "name": "26-proyecto-administrarcitas",
+  "version": "1.0.0",
+  "description": "Proyecto estudio",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.13.1"
+  }
+}

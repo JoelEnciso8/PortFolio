@@ -1,0 +1,40 @@
+//- p= viajes si se agg = a la etiqueta html esta sae convierte en variable, el cual le pasamos el valor que creamos en el archivo router
+//- #() indica que es una variable 
+//- block nos ayuda a canbiar el nombre de nuestra etiqueta sin alterar el codigo, es decir lo hace mas facil llalmando block de index.pug 
+extends ./layout/index
+
+block contenido
+    main.container.mt-5
+        h1.text-center.mt-5 #{pagina}
+        
+        blockquote.text-center Lee sobre nuestros Clientes y sus eperiencias
+        include ./layout/bloque_testimoniales
+
+        .row
+
+            .col-md-12 
+                h2.d-block.w-100.text-center  Agrega un Testimonio 
+
+                //- p= JSON.stringify(errores) - Valida si se esta pasando el formulario vacio y ver si funciona en nuestro render 
+                if(errores)
+                    each error in errores 
+                        .alert.col.alert-danger.text-center=error.mensaje
+
+
+
+                .row.justify-content-center.col 
+                    .col-md-8 
+                        form(action="" method="POST")
+                            .form-group
+                                label(for="nombre") Full Name 
+                                input#nombre(type="text",placeholder="Tu Nombre",name="nombre",class="form-control",value=nombre)
+                            .form-group
+                                label(for="correo") correo   
+                                input#correo(type="text",placeholder="Tu correo",name="correo",class="form-control",value=correo)
+                            .form-group
+                                label(for="mensaje") Mensaje   
+                                textarea#mensaje(class="form-control", name="mensaje",placeholder="Tu mensaje",rows=3)=mensaje
+                            
+                            input.btn.btn-success.btn-block(type="submit")
+            
+

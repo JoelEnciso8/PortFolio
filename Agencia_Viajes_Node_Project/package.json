@@ -1,0 +1,37 @@
+{
+  "name": "agenciaviajes",
+  "version": "1.0.0",
+  "description": "project to create a interactive web site, using Node and Express ",
+  "main": "index.js",
+  "git": "https://github.com/JoelEnciso8/Aprendizaje_JavaScript",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "type": "module",
+  "author": "Joel Steve Enciso Bravo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.11.0",
+    "pug": "^3.0.3",
+    "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "nodemon": "^3.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JoelEnciso8/Aprendizaje_JavaScript.git"
+  },
+  "keywords": [
+    "Express",
+    "and",
+    "Node",
+    "Project"
+  ],
+  "bugs": {
+    "url": "https://github.com/JoelEnciso8/Aprendizaje_JavaScript/issues"
+  },
+  "homepage": "https://github.com/JoelEnciso8/Aprendizaje_JavaScript#readme"
+}

@@ -1,0 +1,14 @@
+//- Agg la class container que esta en nuestro CSS
+//- agg la class copyright que esta en nuestro CSS la cual dara style a nuestro texto
+//- span ayuda a llamar de nuestro router actualYear la cual tiene el valor del año actual 
+footer.container.py-5 
+    .row 
+        .col-md-6 
+            nav.nav.footer.justify-content-center.justify-content-md-start 
+                a.nav-link(href="/nosotros") Nosotros 
+                a.nav-link(href="/viajes") Viajes 
+                a.nav-link(href="/testimoniales") Testimoniales
+        .col 
+            p.copyright.text-center.text-md-right 
+                | Todos Los derechos Reservados
+                span= actualYear 

@@ -7,11 +7,11 @@ import db from "./config/db.js";
 const app = express();
 
 
-// conectando la base de datos 
+// conectando la base de datos , el msj saldra en nuestra terminal cuando corramos el npm 
 db.authenticate().then(()=>console.log('Base de Datos conectada') ).catch(error => console.log(error))
 
 // creamos el puerto donde se hara el deployment de nuestro project
-// process.env- se conoce como variables de entorno
+// process.env.PORT- se conoce como variables de entorno
 const port = process.env.PORT || 4000;
 
 
@@ -21,7 +21,7 @@ const port = process.env.PORT || 4000;
 app.set('view engine','pug');
 
 // Obtener el año actual
-// .use ejecuta todos los verbos 
+// .use ejecuta todos los verbos de HTTP
 app.use((req, res, next)=>{
     const year = new Date();
     res.locals.actualYear = year.getFullYear();
@@ -30,7 +30,7 @@ app.use((req, res, next)=>{
 })
 
 
-// Agregando body parser para leer datos del form
+// Agregando  para leer datos del form
 app.use(express.urlencoded({extended: true}))
 
 

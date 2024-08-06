@@ -33,7 +33,7 @@ const paginaNosotros = (req,res)=>{ // req-lo eque enviamos, res-lo que express 
 }
 
 const paginaViajes = async (req,res)=>{ // req-lo eque enviamos, res-lo que express nos resonde
-    
+
     try {    
     // consultar BD 
     const viajes = await Viaje.findAll();
@@ -73,7 +73,7 @@ const paginaDetalleViaje = async (request, response) =>{
 
     try {
         const viaje = await Viaje.findOne( { where : { slug:request.params.slug } });
-        console.log(viaje);
+        
         response.render('slug',{
             pagina: 'Informacion Viaje',
             viaje

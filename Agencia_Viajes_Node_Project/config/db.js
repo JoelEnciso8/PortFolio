@@ -4,11 +4,13 @@
 /*Sequelize es un ORM para Nodejs que nos permite manipular varias bases de datos SQL de una manera bastante sencilla, entre estas bases de datos podemos encontrar: mysql, sqlite, postgres, mssql.
 */ 
 import  Sequelize from "sequelize";
+import dotenv from "dotenv";
+dotenv.config()
 
-const db = new Sequelize('agenciaviajes','root','1140899378!Je',{ // agenciaviajes:DB, root:Username, PasswordMySQL:114089978!Je
-    host: '127.0.0.1', // LocalHost 
-    port: '3306', // Port created by deafult when installing MySQL
-    dialect:'mysql', // To recognize who to read the code
+
+
+const db = new Sequelize(process.env.DATABASE_URL,{
+
     define:{
         timestamps: false
     },
@@ -18,7 +20,7 @@ const db = new Sequelize('agenciaviajes','root','1140899378!Je',{ // agenciaviaj
         acquire:30000,
         idle: 10000
     },
-    operatorsAliases: false
+    // operatorsAliases: false
     
 })
 

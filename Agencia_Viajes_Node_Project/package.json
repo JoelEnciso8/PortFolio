@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "project to create a interactive web site, using Node and Express ",
   "main": "index.js",
-  "git": "https://github.com/JoelEnciso8/Aprendizaje_JavaScript",
+  "git": "https://github.com/JoelEnciso8/PortFolio",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node js index.js"
   },
   "type": "module",
   "author": "Joel Steve Enciso Bravo",
@@ -23,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JoelEnciso8/Aprendizaje_JavaScript.git"
+    "url": "git+https://github.com/JoelEnciso8/PortFolio"
   },
   "keywords": [
     "Express",

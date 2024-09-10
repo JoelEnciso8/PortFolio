@@ -6,7 +6,7 @@
   "git": "https://github.com/JoelEnciso8/PortFolio",
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "node js index.js"
+    "start": "node index.js"
   },
   "type": "module",
   "author": "Joel Steve Enciso Bravo",
